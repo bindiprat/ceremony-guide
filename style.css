@@ -1,59 +1,64 @@
-/* Fonts & Base Layout */
 body {
   margin: 0;
   font-family: 'Lora', serif;
-  background-color: #fdfaf6;
-  color: #333;
-}
-
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-family: 'Mea Culpa', cursive;
-  font-size: 2rem;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-main {
+  background-color: white; /* makes entire background white */
+  color: #222;
+  line-height: 1.6;
   padding: 1rem;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
-/* Section layout */
 section {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 3rem;
-  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white; /* ensures white background for each section too */
+  padding: 1rem;
+  border-radius: 8px;
 }
 
-section img {
+img {
   width: 100%;
   height: auto;
-  max-height: 500px;
+  max-height: 320px;
   object-fit: contain;
-  display: block;
-  margin: 0 auto 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
 }
 
-section h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+h1 {
   font-family: 'Mea Culpa', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-section p,
-section ul,
-section ol {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 700px;
-  line-height: 1.6;
-  font-size: 1rem;
+h2 {
+  font-family: 'Mea Culpa', cursive;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
+
+@media (min-width: 768px) {
+  section {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  img {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 2rem;
+    max-height: 400px;
+  }
+
+  .description {
+    flex: 1;
+  }
+}
+
 
 /* Responsive tweaks */
 @media screen and (max-width: 600px) {
